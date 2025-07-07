@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Template portafolio desarrollador UI/UX " />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav class="navbar fixed top-0 left-0 w-full px-8 py-0 z-5 flex justify-content-center align-items-center">
+
+        <!-- Botón hamburguesa -->
+        <input type="checkbox" id="menu-toggle" class="checkbox block md:hidden" />
+        <label for="menu-toggle" class="hamburger__lines flex md:hidden">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </label>
+
+        <!-- Menú principal -->
+        <div class="header__info">
+            <ul class="flex flex-column xl:flex-row list-none gap-3 pr-4">
+                <li onclick="scrollToSection('home')">Inicio</li>
+                <li onclick="scrollToSection('about')">Sobre mí</li>
+                <li onclick="scrollToSection('habilidades')">Habilidades</li>
+                <li onclick="scrollToSection('portfolio')">Portafolio</li>
+                <li onclick="scrollToSection('contact')">Contacto</li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!--HOME PAGE -->
+    <div class="container">
+        <section id="home"
+            class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
+            <div class="left__content col-12 xl:col-6">
+                <h3 class="text-3xl sm:text-5xl md:text-7xl">Santiago Aparicio Pérez</h3>
+                <p class="text-gray-500">
+                    Analista y desarrollador de software, especializado en análisis de datos. Datos claros, mejores
+                    decisiones.
+                </p>
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <button onclick="window.open('./assets/CV_Santiago_Aparicio_Pérez.pdf', '_blank')"
+                        aria-label="Descargar curriculum" class="cursor-pointer border-round-lg home__cv__button">
+                        Descargar CV
+                    </button>
+
+                    <button onclick="scrollToSection('portfolio')"
+                        aria-label="Deslizar a sección portafolio para mostrar mis trabajos"
+                        class="cursor-pointer border-round-lg">Proyectos</button>
+                </div>
+            </div>
+            <div class="right__content col-9 sm:col-6 xl:col-5">
+                <img src="./assets/FotoSantiago.jpeg" alt="Foto perfil" class="profile-img">
+            </div>
+        </section>
+        <!--ABOUT ME-->
+        <section id="about" class="about__me w-full pt-8 pb-8">
+
+            <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0 gap-6 md:gap-8">
+
+                <!-- Información -->
+                <div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
+                    <h1 class="text-3xl md:text-5xl">Sobre mí</h1>
+
+                    <p class="text-gray-500 mt-4">
+                        Soy tecnólogo en análisis y desarrollo de software, enfocado en análisis de datos,
+                        automatización de procesos y visualización de información. Me apasiona crear soluciones
+                        prácticas que conectan datos con decisiones reales, y estoy en constante formación para aportar
+                        valor a través de la tecnología.
+                    </p>
+
+                    <!-- Educación -->
+                    <div class="education mt-3">
+                        <h3 class="text-xl mb-3 text-gray-500">Formación académica</h3>
+
+                        <div class="mb-3">
+                            <p class="text-white"><strong>Tecnólogo en Análisis y Desarrollo de Software</strong></p>
+                            <p class="text-gray-500">SENA | Finalizado</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="text-white"><strong>Curso Profesional de Análisis de Datos</strong></p>
+                            <p class="text-gray-500">Google / Coursera | Certificado</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <p class="text-white"><strong>Formación en SAP (en curso)</strong></p>
+                            <p class="text-gray-500">SAP Learning / OpenSAP</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen + botón -->
+                <div class="image col-12 md:col-4 flex flex-column align-items-center">
+                    <img src="./assets/sap.jpeg" alt="Foto relacionado a acerca de mí" class="max-w-full"
+                        style="max-width: 400px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"
+                        loading="lazy">
+
+                    <div class="hireMe__button pt-4 mt-3">
+                        <a href="./assets/Certificados_Santiago_Aparicio.pdf" download
+                            class="cursor-pointer no-underline border-round-lg"
+                            style="border: 1px solid #5CB7F1; padding: 1rem 1.5rem; color: #2c3e50; font-family: 'Poppins'; font-size: small;">
+                            Ver certificados
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </div>
+    <!--FREE LANCER SECTION -->
+    <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+        <p class="text-sm">¿Tienes un proyecto en mente?</p>
+        <h1 class="text-center">Estoy disponible como freelancer</h1>
+        <div class="hireMe__button pt-4">
+            <a href="https://mail.google.com/mail/?view=cm&to=santiagoaparicioperez674@gmail.com"
+                aria-label="Enviar mensaje al correo" class="cursor-pointer border-round-lg"
+                style="padding: 1rem 1.5rem; font-size: 0.9rem; font-family: var(--font); border: 1px solid #5CB7F1; color: var(--font-color); background-color: transparent;">
+                Escríbeme
+            </a>
+
+        </div>
+    </section>
+    <!--Habilidades -->
+    <section id="habilidades" class="habilidades min-h-full w-full pb-7 pt-7">
+        <div class="container text-center">
+            <div class="services__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Habilidades</h1>
+                <p class="text-gray-400 text-sm md:text-base">
+                    Tecnologías y herramientas con las que desarrollo software, automatizo procesos y analizo datos.
+                </p>
+            </div>
+
+            <!-- Análisis de datos -->
+            <h2 class="text-2xl text-gray-500 mt-5 mb-4">Análisis de datos</h2>
+            <div class="services__card w-full grid grid-nogutter justify-content-center gap-5 mb-6">
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Power BI</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Looker Studio</p>
+                    </div>
+                </div>
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Tableau</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Google Colab</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Jupyter</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>SAP (en formación)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desarrollo de software -->
+            <h2 class="text-2xl text-gray-500 mt-5 mb-4">Desarrollo de software</h2>
+            <div class="services__card w-full grid grid-nogutter justify-content-center gap-5">
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Python</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>SQL</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>HTML5</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>CSS3</p>
+                    </div>
+                </div>
+
+                <div class="card flex flex-column align-items-center col-12 sm:col-6 md:col-4 lg:col-3 gap-2 p-4">
+                    <div class="service__logo flex align-items-center justify-content-center">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="service__name">
+                        <p>Git & GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--PORTFOLIO -->
+    <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
+        <div class="portfolio__title flex flex-column gap-3 text-center">
+            <h1 class="text-3xl md:text-5xl">Proyectos</h1>
+            <h3 class="text-gray-400 text-sm md:text-base">
+                Aquí encontrarás proyectos donde aplico mis habilidades en análisis de datos, automatización de procesos
+                y desarrollo de soluciones basadas en datos. Cada trabajo refleja mi enfoque práctico para convertir
+                información en decisiones claras y útiles, con herramientas como Python, SQL, Looker Studio y más.
+            </h3>
+
+        </div>
+        <div class="portfolio__gallery">
+            <div class="gallery__categories mb-5 mt-5">
+                <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                    <li class="filter-item active" data-filter="all">Todos</li>
+                    <li class="filter-item " data-filter="icfes">ICFES</li>
+                    <li class="filter-item " data-filter="banco">Banco</li>
+                    <li class="filter-item " data-filter="salud">Salud</li>
+                </ul>
+            </div>
+            <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-3">
+                <div class="project__card icfes">
+                    <img src="./assets/ICFES.PNG" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>Análisis Exploratorio ICFES</h2>
+                        <p>
+                            Análisis de puntajes Saber 11 desde 2014 a 2024 con Python, Google Colab y Tableau.
+                            Visualización de tendencias y anomalías por año, región y área evaluada.
+                        </p>
+                        <div class="mt-3 flex gap-2 justify-content-center">
+                            <a href="https://public.tableau.com/views/ICFES_17516865397720/DashboardICFES?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                                target="_blank"
+                                class="text-sm px-3 py-1 border-round bg-blue-100 text-blue-900 no-underline font-medium"
+                                aria-label="Ver dashboard del proyecto ICFES">
+                                Ver dashboard
+                            </a>
+                            <a href="https://github.com/SantiAp11/saber11-analisis-exploratorio" target="_blank"
+                                class="text-sm px-3 py-1 border-round bg-gray-200 text-gray-900 no-underline font-medium"
+                                aria-label="Ver repositorio del proyecto ICFES en GitHub">
+                                Ver repositorio
+                            </a>
+                        </div>
+
+
+                        </span>
+
+                    </div>
+                </div>
+                <div class="project__card banco">
+                    <img src="./assets/banco.PNG" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>Análisis de abandono bancario</h2>
+                        <p>
+                            Proyecto simulado con Python para identificar patrones de abandono de clientes usando
+                            análisis exploratorio en un notebook de Google Colab.
+                        </p>
+                        <div class="mt-3 flex gap-2 justify-content-center">
+                            <a href="https://github.com/SantiAp11/analisis-abandono-clientes/blob/main/analisis_abandono_clientes_banco.ipynb"
+                                target="_blank"
+                                class="text-sm px-3 py-1 border-round bg-gray-200 text-gray-900 no-underline font-medium"
+                                aria-label="Ver repositorio del proyecto bancario en GitHub">
+                                Ver repositorio
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="project__card salud">
+                    <img src="./assets/salud.PNG" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>Análisis cobertura salud</h2>
+                        <p>
+                            Dashboard interactivo en Looker Studio que analiza el número de IPS por 100.000 habitantes
+                            en
+                            Colombia. Visualiza diferencias regionales y nivel de acceso.
+                        </p>
+                        <div class="mt-3 flex gap-2 justify-content-center">
+                            <a href="https://lookerstudio.google.com/reporting/1d6f384e-38a2-4434-9df1-88faeb653e8f"
+                                target="_blank"
+                                class="text-sm px-3 py-1 border-round bg-blue-100 text-blue-900 no-underline font-medium"
+                                aria-label="Ver dashboard del proyecto salud">
+                                Ver dashboard
+                            </a>
+                            <a href="https://github.com/SantiAp11/analisis-cobertura-salud-colombia" target="_blank"
+                                class="text-sm px-3 py-1 border-round bg-gray-200 text-gray-900 no-underline font-medium"
+                                aria-label="Ver repositorio del proyecto salud en GitHub">
+                                Ver repositorio
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER -->
+    <footer id="contact" class="footer-section py-5">
+        <div class="container grid md:grid-cols-3 gap-5">
+
+            <!-- Redes sociales -->
+            <div class="social__media flex flex-column gap-3">
+                <h3>Redes sociales</h3>
+                <p>Auténtico e innovador</p>
+                <p>Desarrollo lo que necesitas, con un enfoque en usabilidad y rendimiento</p>
+                <div class="social__mediaIcons flex gap-3">
+                    <a href="https://github.com/SantiAp11" target="_blank" aria-label="Ir a mi GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/santiago-aparicio-p%C3%A9rez-21627a240/" target="_blank"
+                        aria-label="Ir a linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Contacto -->
+            <div class="contact flex flex-column gap-3">
+                <h3>Contacto</h3>
+                <div class="flex align-items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+57 313 5414408</p>
+                </div>
+                <div class="flex align-items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>santiagoaparicioperez674@gmail.com</p>
+                </div>
+                <a href="https://wa.me/1573135414408" target="_blank" class="whatsapp-button mt-2">
+                    <i class="fab fa-whatsapp"></i> Escríbeme por WhatsApp
+                </a>
+            </div>
+
+            <!-- Servicios -->
+            <div class="my__services flex flex-column gap-2">
+                <h3>Servicios</h3>
+                <p>Desarrollo web</p>
+                <p>Automatización</p>
+                <p>Análisis de datos</p>
+                <p>Visualización de información</p>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+</body>
+<script>
+    const filterContainer = document.querySelector(".gallery__categories");
+    const galleryItems = document.querySelectorAll(".project__card");
+
+    filterContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("filter-item")) {
+            filterContainer.querySelector(".active").classList.remove("active");
+            event.target.classList.add("active")
+            const filterValue = event.target.getAttribute("data-filter")
+            galleryItems.forEach(item => {
+                if (item.classList.contains(filterValue) || filterValue === "all") {
+                    item.classList.remove("hide")
+                    item.classList.add("show")
+                } else {
+                    item.classList.remove("show")
+                    item.classList.add("hide")
+                }
+            })
+        }
+    })
+
+    function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        const header = document.querySelector('.navbar');
+        const headerHeight = header.offsetHeight;
+
+        // Ajuste adicional negativo (puedes probar -10, -20, -40... según se necesite)
+        const extraOffset = -40;
+
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight - extraOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,453 @@
+/* --------GENERAL STYLES -------- */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 4rem;
+}
+
+:root {
+    --bg-color: #f8f8f8;
+    --font-color: #2c3e50;
+    --secondary-bg-color: #5cb7f1;
+    --font: "Poppins";
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font);
+    color: var(--font-color);
+    height: 100vh;
+    max-width: 100vw;
+}
+
+.container {
+    padding: 0rem 12rem;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* ------ CHANGE SCROLL BAR -------*/
+body::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(165, 162, 162);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:active {
+    background-color: var(--secondary-bg-color);
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(104, 103, 103, 0.3);
+}
+
+/* ------- HEADER -------- */
+.navbar {
+    border-bottom: 3px solid #5cb7f1;
+    padding: 0 12rem;
+    background-color: var(--bg-color);
+    position: relative;
+}
+.header__info ul li {
+    padding: 2.5rem 1.2rem 1rem 1.2rem;
+    cursor: pointer;
+}
+
+.hireMe__button a {
+    background-color:transparent;
+    color: var(--font-color);
+    font-family: var(--font);
+    font-size: small;
+    padding: 1rem 1.5rem;
+    border-width: 1;
+    border-color: #5CB7F1;
+}
+
+.header__info ul li:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+
+/* ------- HOME -------- */
+
+.right__content img {
+    height: 100%;
+    width: 100%;
+}
+
+.home__page {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.message__bubble {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: auto;
+    background-color: var(--secondary-bg-color);
+}
+
+.triangle:after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    border: 15px solid;
+    border-color: var(--secondary-bg-color) transparent transparent transparent;
+}
+
+.message__text {
+    padding: 1rem;
+}
+
+.home__buttons button {
+    padding: 1rem 2rem;
+    color: var(--font-color);
+}
+
+.home__buttons a {
+    background-color: var(--secondary-bg-color);
+    font-size: 0.9rem;
+    color: #5CB7F1;
+    padding: 1rem 1.5rem;
+}
+
+.home__buttons button {
+    background-color: transparent;
+    border: 1px solid #5CB7F1;
+    border-width: thin;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 576px) {
+    .message__bubble {
+        width: 160px;
+    }
+
+    .home__buttons a {
+        padding: 1rem 1rem !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .home__page {
+        padding-top: 10rem;
+    }
+}
+
+
+
+/* ------- ABOUT ME -------- */
+
+.about__me {
+    background-color: var(--bg-color);
+    padding: 6rem 0;
+}
+
+.aboutMe__info h1 {
+    color: var(--font-color);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.aboutMe__info p {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    max-width: 600px;
+}
+
+.about__me .education {
+    background-color: #f8f8f8;
+    border: 1px solid #5cb7f1;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    max-width: 600px;
+}
+
+.about__me .education h3 {
+    color: #000;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.about__me .education .mb-3 {
+    margin-bottom: 1.2rem;
+}
+
+.about__me .education p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.about__me .education strong {
+    color: var(--font-color);
+}
+
+.about__me .image img {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .aboutMe__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutMe__info,
+    .about__me .education {
+        text-align: center;
+    }
+
+    .about__me .image {
+        margin-top: 2rem;
+    }
+}
+
+/* ------- FREE LANCER -------- */
+
+.freelancer {
+    height: 50vh;
+    background-image: linear-gradient(rgba(56, 168, 163, 0.9), rgba(235, 240, 241, 0.9)), url(./assets/freelancer2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------- habilidades -------- */
+.habilidades {
+    padding-top: 81px;
+}
+
+.card {
+    background-color: #b3d8d8;
+    transition: all 0.2s ease-in;
+}
+
+.service__logo {
+    height: 60px;
+    width: 60px;
+    background-color: #bceaf0;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.service__logo i {
+    font-size: x-large;
+    transition: all 0.2s ease-in;
+}
+
+.card:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+.card:hover .service__logo {
+    background-color: #fff;
+}
+
+.card:hover .service__logo i {
+    color: #000;
+}
+
+
+/* ------- PORTFOLIO -------- */
+
+.gallery__categories ul li {
+    font-size: small;
+    cursor: pointer;
+}
+
+.gallery__categories .filter-item.active {
+    border-bottom: 1px solid var(--secondary-bg-color);
+}
+
+.project__card {
+    width: 350px;
+    height: 250px;
+    display: block;
+    position: relative;
+    border: 3px solid #5cb7f1;
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.project__card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.project__card .overlay {
+    background: #5cb7f1;
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.project__card .project__info {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.project__card .project__info p {
+    font-size: small;
+    margin-top: 2rem;
+}
+
+.project__card .fa-arrow-right-long {
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+.project__card:hover .project__info {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.project__card:hover .overlay {
+    opacity: 1;
+}
+
+
+.project__card.hide {
+    display: none;
+}
+
+.project__card.show {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ------- FOOTER -------- */
+footer {
+    border-top: 2px solid #5cb7f1;
+}
+
+:is(.social__media, .contact, .my__services) h3 {
+    margin-bottom: 0.5rem;
+}
+
+:is(.social__media, .contact, .my__services) p,
+:is(.fa-phone, .fa-envelope, .fa-message, .fa-brands) {
+    color: #131212;
+}
+
+.social__mediaIcons .fa-brands {
+    font-size: 2rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+.social__mediaIcons .fa-brands:hover {
+    color: var(--secondary-bg-color);
+}
+
+.contact a {
+    padding: 0.5rem 1.8rem;
+    background-color: unset;
+    border: 1px solid var(--secondary-bg-color);
+    font-family: var(--font);
+    font-size: 0.9rem;
+    color: #111111;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* 🔥 redondea completamente */
+    border: 3px solid var(--secondary-bg-color);
+    /* opcional */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* opcional */
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Corrige el scroll para secciones con header fijo --- */
+#about,
+#habilidades,
+#portfolio,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .about__me .image {
+        margin-top: 6rem;
+    }
+}
+
+#about {
+  scroll-margin-top: 30px !important; /* o incluso menos */
+}
+
+/*.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25d366;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  font-family: var(--font);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebc59;
+  text-decoration: none;
+}
