@@ -434,20 +434,52 @@ footer {
   scroll-margin-top: 30px !important; /* o incluso menos */
 }
 
-/*.whatsapp-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #25d366;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  font-size: 0.95rem;
-  font-family: var(--font);
-  border-radius: 8px;
-  transition: background 0.3s ease;
+@media screen and (max-width: 768px) {
+  .header__info {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    border-top: 1px solid var(--secondary-bg-color);
+    padding: 1rem;
+    z-index: 99;
+  }
+
+  #menu-toggle:checked ~ .header__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__info ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .header__info ul li {
+    padding: 1rem 0;
+    text-align: center;
+  }
+}
+.hamburger__lines {
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem;
+  cursor: pointer;
 }
 
-.whatsapp-button:hover {
-  background-color: #1ebc59;
-  text-decoration: none;
+.hamburger__lines .line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--font-color);
+  transition: all 0.3s ease-in-out;
+}
+#menu-toggle {
+  display: none !important;
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
 }
